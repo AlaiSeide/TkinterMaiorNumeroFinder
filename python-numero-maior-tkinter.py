@@ -1,21 +1,30 @@
 import tkinter as tk
 
 def encontrar_maior():
-    num1 = int(entry1.get())
-    num2 = int(entry2.get())
-    num3 = int(entry3.get())
 
-    maior = num1
+    try:
+        num1 = int(entry1.get())
+        num2 = int(entry2.get())
+        num3 = int(entry3.get())
 
-    if num2 > maior:
-        maior = num2
+        maior = num1
 
-    if num3 > maior:
-        maior = num3
+        if num2 > maior:
+            maior = num2
 
-    resultado.config(text=f"O maior número é: {maior}")
+        if num3 > maior:
+            maior = num3
+
+        resultado.config(text=f"O maior número é: {maior}")
+
+    except ValueError:
+        resultado.config(text=f"Digite todos os valores corretamente.")
 
 janela = tk.Tk()
+
+janela.title('Maiornumberfinder')
+janela.geometry('350x200')
+janela.resizable(False, False)
 
 label1 = tk.Label(janela, text="Digite o primeiro número:")
 label1.pack()
