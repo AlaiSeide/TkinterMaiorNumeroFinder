@@ -18,7 +18,7 @@ def encontrar_maior():
         resultado.config(text=f"O maior número é: {maior}")
 
     except ValueError:
-        resultado.config(text=f"Digite todos os valores corretamente.")
+        resultado.config(text="Digite todos os valores corretamente.")
 
 janela = tk.Tk()
 
